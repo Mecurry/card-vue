@@ -180,14 +180,14 @@ export default {
             "http://103.120.225.226:18300/evi-car-service/manager/staff/carInfo/OCRIdentify",
           fileKey: "card_img",
           filePath: returndata,
-          formParam: {},
+          formParam: {}, 
           isLoading: "true"
         };
         dsBridge.call(
           "FunctionApi.uploadFile",
           JSON.stringify(apiData),
           function(v) {
-            alert("v:"+v);
+            alert("v1:"+v);
             let cinfo = JSON.parse(v);
             alert("cinfo:"+cinfo);
             alert("state:"+cinfo.data.state);
